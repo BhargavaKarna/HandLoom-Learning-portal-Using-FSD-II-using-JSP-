@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Marks Page</title>
+  </head>
+  <body>
+    <h1>Marks</h1>
+    <p>Your score is: <span id="score"></span>/100</p>
+    <div id="buttons"></div>
+  </body>
+  <script>
+    var urlParams = new URLSearchParams(window.location.search);
+    var marks = urlParams.get('marks');
+    document.getElementById("score").innerHTML = marks;
+    if (marks == 100) {
+      var downloadBtn = document.createElement("button");
+      downloadBtn.innerHTML = "Download Certificate";
+      document.getElementById("buttons").appendChild(downloadBtn);
+    } else {
+      var retakeBtn = document.createElement("button");
+      retakeBtn.innerHTML = "Retake Exam";
+      retakeBtn.onclick = function() { window.location.href = "test.html"; };
+      document.getElementById("buttons").appendChild(retakeBtn);
+    }
+  </script>
+</html>

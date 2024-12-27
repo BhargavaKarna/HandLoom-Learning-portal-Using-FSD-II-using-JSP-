@@ -1,0 +1,58 @@
+<html>
+<style>
+body {
+         background-image: url("saree1.jpg");
+		 background-size: 500px;
+        }
+.button-35 {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family:"Lucida Console", "Courier New", monospace ;
+  font-size: 1.0rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-35:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+
+</style>
+<body>
+<h2>
+<a href="i1.html" target="RFRAME" ><button class="button-35" role="button">1.Introduction 1</button></a><br><br>
+<a href="r1.html" target="RFRAME"><button class="button-35" role="button">3.Requirements 1</button></a><br><br>
+<a href="r2.html" target="RFRAME"><button class="button-35" role="button">4.Requirements 2</button></a><br><br>
+<a href="r3.html" target="RFRAME"><button class="button-35" role="button">5.Requirements 3</button></a><br><br>
+<a href="u1.html" target="RFRAME"><button class="button-35" role="button">6.Usage 1</button></a><br><br>
+<a href="u2.html" target="RFRAME"><button class="button-35" role="button">7.Usage 2</button></a><br><br>
+<a href="u3.html" target="RFRAME"><button class="button-35" role="button">8.Usage 3</button></a><br><br>
+<a href="s1.html" target="RFRAME"><button class="button-35" role="button">9.Session 1</button></a><br><br>
+<a href="s2.html" target="RFRAME"><button class="button-35" role="button">10.Session 2</button></a><br><br>
+<a href="s3.html" target="RFRAME"><button class="button-35" role="button">11.Session 3</button></a><br><br>
+<a href="s4.html" target="RFRAME"><button class="button-35" role="button">12.Session 4</button></a><br><br>
+<a href="s5.html" target="RFRAME"><button class="button-35" role="button">13.Session 5</button></a><br><br>
+<a href="t1.html" target="RFRAME"><button class="button-35" role="button">14.TEST</button></a><br><br>
+<a href="g1.html" target="RFRAME"><button class="button-35" role="button">15.Get Certificate</button></a>
+</h2>
+</body>
+</html>

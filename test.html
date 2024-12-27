@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exam Page</title>
+  </head>
+  <body>
+    <h1>Exam</h1>
+    <form id="exam-form" onsubmit="return validateExam();">
+      <p>Question 1: What is handloom?</p>
+      <input type="radio" name="q1" value="a">​a machine for making cloth that is operated by hand.<br>
+      <input type="radio" name="q1" value="b">​a machine for making cloth that is operated by machines.<br>
+      <input type="radio" name="q1" value="c">​a machine for making cloth that is operated by hand and machines.<br>
+	  <input type="radio" name="q1" value="d">​None of the above.<br>
+      <br>
+      <p>Question 2: When national handloom day celebrated?</p>
+      <input type="radio" name="q2" value="a">August 1<br>
+      <input type="radio" name="q2" value="b">August 7<br>
+      <input type="radio" name="q2" value="c">August 5<br>
+	  <input type="radio" name="q2" value="d">​August 15<br>
+      <br>
+      <button type="submit">Submit Exam</button>
+    </form>
+  </body>
+  <script>
+    function validateExam() {
+      var q1Answer = document.querySelector('input[name="q1"]:checked').value;
+      var q2Answer = document.querySelector('input[name="q2"]:checked').value;
+      if (q1Answer === "c" && q2Answer === "b") {
+        window.location.href = "marks.html?marks=100";
+      } else {
+        window.location.href = "marks.html?marks=0";
+      }
+      return false;
+    }
+  </script>
+</html>

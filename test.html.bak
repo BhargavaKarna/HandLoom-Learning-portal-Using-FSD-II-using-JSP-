@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exam Page</title>
+  </head>
+  <body>
+    <h1>Exam</h1>
+    <form id="exam-form" onsubmit="return validateExam();">
+      <p>Question 1: What is 2 + 2?</p>
+      <input type="radio" name="q1" value="a"> 3<br>
+      <input type="radio" name="q1" value="b"> 4<br>
+      <input type="radio" name="q1" value="c"> 5<br>
+      <br>
+      <p>Question 2: What is the capital of France?</p>
+      <input type="radio" name="q2" value="a"> Berlin<br>
+      <input type="radio" name="q2" value="b"> Paris<br>
+      <input type="radio" name="q2" value="c"> London<br>
+      <br>
+      <button type="submit">Submit Exam</button>
+    </form>
+  </body>
+  <script>
+    function validateExam() {
+      var q1Answer = document.querySelector('input[name="q1"]:checked').value;
+      var q2Answer = document.querySelector('input[name="q2"]:checked').value;
+      if (q1Answer === "b" && q2Answer === "b") {
+        window.location.href = "marks.html?marks=100";
+      } else {
+        window.location.href = "marks.html?marks=0";
+      }
+      return false;
+    }
+  </script>
+</html>

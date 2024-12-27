@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Result Page</title>
+</head>
+<body>
+  <h1>Result Page</h1>
+  <p>Your score is <span id="score"></span> out of 2.</p>
+  <a href="certificate.html"><button id="certificate-button">Download Certificate</button><a>
+  <a href="test.html"><button> Back </button></a>
+
+  <script>
+  // Get score from localStorage
+const score = localStorage.getItem('examScore');
+
+// Display score on page
+const scoreElement = document.getElementById('score');
+scoreElement.textContent = score;
+
+// Handle certificate download button click
+const certificateButton = document.getElementById('certificate-button');
+certificateButton.addEventListener('click', () => {
+  // Generate certificate
+  const certificate = generateCertificate();
+
+  // Download certificate
+  downloadCertificate(certificate);
+});
+
+// Generate certificate HTML
+function generateCertificate() {
+  const name = 'John Doe'; // Replace with user's name
+
+  const html = `
+    <html>
+    <head>
+      <title>Certificate of Achievement</title>
+    </head>
+    <body>
+      <h1>Certificate of Achievement</h1>
+      <p>This certificate is awarded to ${name} for passing the exam with a score of ${score}/2.</p>
+    </body>
+    </html>
+  `;
+
+  return html;
+}
+
+// Download certificate as a PDF
+function downloadCertificate(html) {
+  const pdf = new jsPDF();
+  pdf.fromHTML(html, 15, 15);
+  pdf.save('certificate.pdf');
+}
+</script>
+</body>
+</html>

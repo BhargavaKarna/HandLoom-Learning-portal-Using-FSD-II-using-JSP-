@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Result Page</title>
+</head>
+<body>
+  <h1>Result Page</h1>
+</body>
+
+
+  <script>
+  const userAnswers = JSON.parse(localStorage.getItem("userAnswers"));
+let score = 0;
+
+if (userAnswers[0] === "paris") {
+  score++;
+}
+
+if (userAnswers[1] === "whale") {
+  score++;
+}
+
+const marksDisplay = document.getElementById("marks-display");
+
+if (score === 2) {
+  marksDisplay.innerHTML = `Congratulations! You scored full marks.<br><button><a href="./certificate.pdf" download>Download Certificate</a></button>`;
+} else {
+  marksDisplay.innerHTML = `You scored ${score} out of 2. Please retake the exam.<br><button><a href="./exam.html">Retake Exam</a></button>`;
+}
+
+localStorage.removeItem("userAnswers");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<%@page import="java.sql/*"%>
+<%
+String name=request.getParameter("uname");
+String password=request.getparameter("pass");
+out.println(name+password);
